@@ -16,10 +16,12 @@
                             orange: '#F77F00',
                             yellow: '#FCBF49',
                             red: '#E63946',
-                            text: '#1E293B',
-                            lightBg: '#F8FAFC',
-                            cardBg: '#FFFFFF'
+                            text: '#1E293B'
                         }
+                    },
+                    fontFamily: {
+                        logo: ['Montserrat', 'sans-serif'],
+                        body: ['Inter', 'sans-serif']
                     }
                 }
             }
@@ -27,10 +29,11 @@
     </script>
     <!-- FontAwesome Icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <!-- Google Fonts (Poppins) -->
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <!-- Google Fonts: Montserrat (Marca) e Inter (Textos) -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Montserrat:wght@700;800;900&display=swap" rel="stylesheet">
     <style>
-        body { font-family: 'Poppins', sans-serif; background-color: #FFFFFF; color: #1E293B; }
+        body { font-family: 'Inter', sans-serif; background-color: #FFFFFF; color: #1E293B; }
+        .font-logo { font-family: 'Montserrat', sans-serif; }
         .bg-subtle-grid {
             background-size: 30px 30px;
             background-image: linear-gradient(to right, rgba(0, 0, 0, 0.03) 1px, transparent 1px),
@@ -43,21 +46,29 @@
     <!-- Header / Navbar -->
     <header class="sticky top-0 z-50 bg-white/95 backdrop-blur-md border-b border-slate-200 shadow-sm">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
-            <!-- Logo estilo Cartão -->
+            
+            <!-- Logo idêntica ao cartão com ícone dos passarinhos em SVG -->
             <a href="#" class="flex items-center gap-3">
-                <div class="flex items-center gap-1 text-2xl font-black tracking-wider text-slate-900">
-                    <span>ALT</span>
-                    <span class="text-slate-900">LINE</span>
-                    <div class="flex flex-col ml-1">
-                        <span class="w-3 h-1 bg-brand-cyan mb-0.5 rounded-full"></span>
-                        <span class="w-3 h-1 bg-brand-yellow mb-0.5 rounded-full"></span>
-                        <span class="w-3 h-1 bg-brand-orange rounded-full"></span>
+                <svg width="38" height="38" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M20 50 Q35 25 50 20 Q40 40 20 50 Z" fill="#00A896"/>
+                    <path d="M15 70 Q30 45 45 40 Q35 60 15 70 Z" fill="#FCBF49"/>
+                    <path d="M55 40 Q70 15 85 10 Q75 30 55 40 Z" fill="#F77F00"/>
+                    <path d="M50 65 Q65 40 80 35 Q70 55 50 65 Z" fill="#E63946"/>
+                </svg>
+                <div class="flex items-baseline">
+                    <span class="font-logo font-black text-2xl tracking-[0.2em] text-slate-900">ALT</span>
+                    <span class="font-logo font-black text-2xl tracking-[0.2em] text-slate-900">LIN</span>
+                    <span class="font-logo font-black text-2xl tracking-[0.2em] text-slate-900">E</span>
+                    <div class="ml-1.5 flex flex-col gap-[3px] self-center">
+                        <span class="w-3.5 h-[3px] bg-brand-cyan rounded-full"></span>
+                        <span class="w-3.5 h-[3px] bg-brand-yellow rounded-full"></span>
+                        <span class="w-3.5 h-[3px] bg-brand-orange rounded-full"></span>
                     </div>
                 </div>
             </a>
 
             <!-- Navegação -->
-            <nav class="hidden md:flex items-center gap-8 text-sm font-semibold text-slate-600">
+            <nav class="hidden md:flex items-center gap-8 text-xs font-bold tracking-wider uppercase text-slate-600">
                 <a href="#apresentacao" class="hover:text-brand-cyan transition-colors">Apresentação</a>
                 <a href="#tecnologia" class="hover:text-brand-orange transition-colors">Impressoras</a>
                 <a href="#modelos" class="hover:text-brand-red transition-colors">Galeria</a>
@@ -65,8 +76,8 @@
             </nav>
 
             <!-- Botão WhatsApp -->
-            <a href="https://wa.me/553299941276" target="_blank" class="hidden sm:inline-flex items-center gap-2 bg-emerald-600 hover:bg-emerald-700 text-white px-4 py-2.5 rounded-xl font-medium shadow-md transition-all hover:scale-105">
-                <i class="fa-brands fa-whatsapp text-lg"></i>
+            <a href="https://wa.me/553299941276" target="_blank" class="hidden sm:inline-flex items-center gap-2 bg-emerald-600 hover:bg-emerald-700 text-white px-4 py-2 rounded-xl text-xs font-bold tracking-wide uppercase transition-all shadow-sm hover:scale-105">
+                <i class="fa-brands fa-whatsapp text-sm"></i>
                 <span>(32) 9994-1276</span>
             </a>
         </div>
@@ -79,24 +90,24 @@
             Soluções & Impressões 3D
         </div>
 
-        <h1 class="text-4xl sm:text-6xl font-extrabold text-slate-900 tracking-tight mb-4">
-            A sua ideia impressa em <span class="bg-gradient-to-r from-brand-cyan via-brand-orange to-brand-red bg-clip-text text-transparent">3D</span>
+        <h1 class="font-logo text-4xl sm:text-6xl font-black text-slate-900 tracking-tight mb-3">
+            ALT<span class="text-slate-900">LINE</span> <span class="bg-gradient-to-r from-brand-cyan via-brand-orange to-brand-red bg-clip-text text-transparent">3D</span>
         </h1>
 
-        <!-- Slogan do Cartão -->
-        <p class="text-sm sm:text-base font-semibold tracking-widest text-slate-500 uppercase mb-6">
+        <!-- Slogan com Tipografia do Cartão -->
+        <p class="text-xs sm:text-sm font-semibold tracking-[0.25em] text-slate-500 uppercase mb-8">
             — CONECTAMOS IDEIAS, ELEVAMOS SOLUÇÕES. —
         </p>
 
-        <p class="max-w-2xl mx-auto text-slate-600 text-base sm:text-lg mb-8 leading-relaxed">
-            Personalização para Aniversários, Festas e Eventos • Projetos Personalizados • Impressão Técnica e Utilidades.
+        <p class="max-w-2xl mx-auto text-slate-600 text-sm sm:text-base mb-8 leading-relaxed">
+            Soluções e Impressões • Personalização para Aniversários, Festas e Eventos • Projetos Personalizados
         </p>
 
         <div class="flex flex-wrap items-center justify-center gap-4">
-            <a href="#modelos" class="bg-slate-900 hover:bg-slate-800 text-white font-semibold px-6 py-3.5 rounded-xl shadow-lg transition-all hover:scale-105">
-                Ver Modelos
+            <a href="#modelos" class="bg-slate-900 hover:bg-slate-800 text-white font-bold text-xs uppercase tracking-wider px-6 py-3.5 rounded-xl shadow-md transition-all hover:scale-105">
+                Ver Galeria
             </a>
-            <a href="#pedidos" class="bg-white hover:bg-slate-50 border border-slate-300 text-slate-800 font-semibold px-6 py-3.5 rounded-xl transition-all shadow-sm">
+            <a href="#pedidos" class="bg-white hover:bg-slate-50 border border-slate-300 text-slate-800 font-bold text-xs uppercase tracking-wider px-6 py-3.5 rounded-xl transition-all shadow-sm">
                 Solicitar Orçamento
             </a>
         </div>
@@ -107,37 +118,34 @@
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
                 
-                <!-- ======================================================== -->
-                <!-- FOTO DA IMPRESSORA 3D (Bambu Lab em produção)            -->
-                <!-- ======================================================== -->
-                <div class="relative rounded-2xl overflow-hidden border border-slate-200 bg-white shadow-xl">
-                    <!-- ALTERE O ATRIBUTO 'src' ABAIXO PARA O NOME/CAMINHO DA SUA FOTO DA MÁQUINA -->
-                    <img src="imagens/maquina.jpg"  
-                         alt="Impressora 3D Bambu Lab" 
-                         class="w-full h-[400px] object-cover">
+                <div class="relative rounded-2xl overflow-hidden border border-slate-200 bg-white shadow-lg">
+                    <!-- FOTO DA IMPRESSORA 3D -->
+                    <img src="imagens/impressora.jpg" 
+                         alt="Impressora 3D Bambu Lab em Produção" 
+                         class="w-full h-[380px] object-cover">
                     <div class="p-4 bg-white border-t border-slate-100">
-                        <span class="text-xs font-bold text-brand-cyan uppercase">Tecnologia Multicores</span>
-                        <h3 class="text-lg font-bold text-slate-900">Impressões em Alta Velocidade</h3>
+                        <span class="text-[10px] font-bold text-brand-cyan uppercase tracking-wider">Bambu Lab High-Speed</span>
+                        <h3 class="font-logo text-base font-bold text-slate-900">Impressão Multicolorida de Precisão</h3>
                     </div>
                 </div>
 
                 <div class="space-y-6">
-                    <span class="px-3 py-1 rounded-md bg-brand-cyan/10 text-brand-cyan text-xs font-bold uppercase">Nossos Equipamentos</span>
-                    <h2 class="text-3xl font-extrabold text-slate-900">Precisão e Qualidade em Cada Camada</h2>
-                    <p class="text-slate-600 leading-relaxed">
-                        Trabalhamos com impressoras de ponta capazes de criar peças multicoloridas, resistentes e com alto nível de detalhamento para qualquer necessidade.
+                    <span class="px-3 py-1 rounded-md bg-brand-cyan/10 text-brand-cyan text-xs font-bold uppercase tracking-wider">Nossos Equipamentos</span>
+                    <h2 class="font-logo text-3xl font-extrabold text-slate-900">Precisão e Acabamento em Cada Detalhe</h2>
+                    <p class="text-slate-600 text-sm leading-relaxed">
+                        Nossa estrutura conta com tecnologia para criar peças com múltiplas cores e excelente resistência, ideal para festas, brindes e projetos sob medida.
                     </p>
 
                     <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
                         <div class="p-4 rounded-xl bg-white border border-slate-200 shadow-sm">
-                            <i class="fa-solid fa-layer-group text-brand-orange text-xl mb-2"></i>
-                            <h4 class="font-bold text-slate-900 text-sm">Cores Integradas</h4>
-                            <p class="text-xs text-slate-500 mt-1">Peças coloridas diretamente na impressão.</p>
+                            <i class="fa-solid fa-palette text-brand-orange text-lg mb-2"></i>
+                            <h4 class="font-logo font-bold text-slate-900 text-sm">Multicores</h4>
+                            <p class="text-xs text-slate-500 mt-1">Peças coloridas prontas da impressora.</p>
                         </div>
                         <div class="p-4 rounded-xl bg-white border border-slate-200 shadow-sm">
-                            <i class="fa-solid fa-shapes text-brand-cyan text-xl mb-2"></i>
-                            <h4 class="font-bold text-slate-900 text-sm">Peças Técnicas</h4>
-                            <p class="text-xs text-slate-500 mt-1">Prototipagem e soluções sob medida.</p>
+                            <i class="fa-solid fa-cube text-brand-cyan text-lg mb-2"></i>
+                            <h4 class="font-logo font-bold text-slate-900 text-sm">Projetos Sob Medida</h4>
+                            <p class="text-xs text-slate-500 mt-1">Desenvolvimento de ideias e utilidades.</p>
                         </div>
                     </div>
                 </div>
@@ -148,77 +156,57 @@
     <!-- Galeria de Modelos -->
     <section id="modelos" class="py-20 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div class="text-center max-w-2xl mx-auto mb-12">
-            <h2 class="text-3xl font-extrabold text-slate-900">Nossos Trabalhos</h2>
-            <p class="text-slate-500 mt-2">Veja alguns dos projetos impressos e entregues pela ALTLINE 3D.</p>
+            <h2 class="font-logo text-3xl font-black text-slate-900">Nossos Trabalhos</h2>
+            <p class="text-slate-500 text-sm mt-2">Confira algumas peças produzidas para nossos clientes.</p>
         </div>
 
         <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
 
-            <!-- ======================================================== -->
-            <!-- FOTO 1: Suportes de Mesa                                 -->
-            <!-- ======================================================== -->
+            <!-- Card 1: Suportes -->
             <div class="bg-white border border-slate-200 rounded-2xl overflow-hidden shadow-sm hover:shadow-md transition-all">
                 <div class="h-60 overflow-hidden bg-slate-100">
-                    <!-- ALTERE O 'src' ABAIXO PARA O CAMINHO DA SUA FOTO DE SUPORTES -->
-                    <img src="imagens/suporte.jpg" 
-                         alt="Suportes para Celular e Tablet" 
-                         class="w-full h-full object-cover">
+                    <img src="imagens/suporte-mesa.jpg" alt="Suportes para Celular e Tablet" class="w-full h-full object-cover">
                 </div>
                 <div class="p-5">
-                    <span class="text-[10px] font-bold text-brand-cyan uppercase">Utilidades</span>
-                    <h3 class="font-bold text-slate-900 mt-1">Suportes para Celular e Tablet</h3>
-                    <p class="text-xs text-slate-500 mt-1">Design funcional e minimalista nas cores bege e preto.</p>
+                    <span class="text-[10px] font-bold text-brand-cyan uppercase tracking-wider">Utilidades</span>
+                    <h3 class="font-logo font-bold text-slate-900 text-sm mt-1">Suportes de Mesa</h3>
+                    <p class="text-xs text-slate-500 mt-1">Design minimalista bege e preto.</p>
                 </div>
             </div>
 
-            <!-- ======================================================== -->
-            <!-- FOTO 2: Lembrancinhas e Festas                           -->
-            <!-- ======================================================== -->
+            <!-- Card 2: Lembrancinhas -->
             <div class="bg-white border border-slate-200 rounded-2xl overflow-hidden shadow-sm hover:shadow-md transition-all">
                 <div class="h-60 overflow-hidden bg-slate-100">
-                    <!-- ALTERE O 'src' ABAIXO PARA A FOTO DE FESTAS / MINIATURAS -->
-                    <img src="imagens/lembrancinha.jpg" 
-                         alt="Lembrancinhas de Aniversário" 
-                         class="w-full h-full object-cover">
+                    <img src="imagens/lembrancinhas.jpg" alt="Lembrancinhas de Aniversário" class="w-full h-full object-cover">
                 </div>
                 <div class="p-5">
-                    <span class="text-[10px] font-bold text-brand-orange uppercase">Aniversários & Festas</span>
-                    <h3 class="font-bold text-slate-900 mt-1">Lembrancinhas Personalizadas</h3>
-                    <p class="text-xs text-slate-500 mt-1">Impressão em lote com alta precisão para eventos.</p>
+                    <span class="text-[10px] font-bold text-brand-orange uppercase tracking-wider">Festas & Eventos</span>
+                    <h3 class="font-logo font-bold text-slate-900 text-sm mt-1">Lembrancinhas</h3>
+                    <p class="text-xs text-slate-500 mt-1">Personalizações em lote.</p>
                 </div>
             </div>
 
-            <!-- ======================================================== -->
-            <!-- FOTO 3: Chaveiros e Brindes                              -->
-            <!-- ======================================================== -->
+            <!-- Card 3: Chaveiro Porta Joias -->
             <div class="bg-white border border-slate-200 rounded-2xl overflow-hidden shadow-sm hover:shadow-md transition-all">
                 <div class="h-60 overflow-hidden bg-slate-100">
-                    <!-- ALTERE O 'src' ABAIXO PARA A FOTO DE CHAVEIROS / PORTA JOIAS -->
-                    <img src="imagens/chaveiro.jpg" 
-                         alt="Chaveiro Porta Joias" 
-                         class="w-full h-full object-cover">
+                    <img src="imagens/chaveiro-porta-joias.jpg" alt="Chaveiro Porta Joias" class="w-full h-full object-cover">
                 </div>
                 <div class="p-5">
-                    <span class="text-[10px] font-bold text-brand-red uppercase">Brindes & Chaveiros</span>
-                    <h3 class="font-bold text-slate-900 mt-1">Chaveiro Porta-Anéis Articulado</h3>
-                    <p class="text-xs text-slate-500 mt-1">Mecanismo dobrável impresso diretamente em uma peça.</p>
+                    <span class="text-[10px] font-bold text-brand-red uppercase tracking-wider">Brindes</span>
+                    <h3 class="font-logo font-bold text-slate-900 text-sm mt-1">Chaveiro Porta-Anéis</h3>
+                    <p class="text-xs text-slate-500 mt-1">Caixinha articulada portátil.</p>
                 </div>
             </div>
 
-            <!-- ======================================================== -->
-            <!-- FOTO 4: Troféus e Premiações                             -->
-            <!-- ======================================================== -->
+            <!-- Card 4: Troféu -->
             <div class="bg-white border border-slate-200 rounded-2xl overflow-hidden shadow-sm hover:shadow-md transition-all">
                 <div class="h-60 overflow-hidden bg-slate-100">
-                    <!-- ALTERE O 'src' ABAIXO PARA A FOTO DO TROFÉU -->
-                    <img src="imagens/trofeu.jpg"
-                         alt="Troféu Personalizado" 
-                         class="w-full h-full object-cover">
+                    <img src="imagens/trofeu-melhor-da-partida.jpg" alt="Troféu Personalizado" class="w-full h-full object-cover">
                 </div>
                 <div class="p-5">
-                    <span class="text-[10px] font-bold text-brand-yellow uppercase">Eventos & Troféus</span>
-                    <h3 class="font-bold text-slate-900 mt-1">Troféu "Melhor da Partida"</h3>
-                    <p class="text-xs text-slate-500 mt-1">Acabamento com textura dourada para premiações.</p>
+                    <span class="text-[10px] font-bold text-brand-yellow uppercase tracking-wider">Eventos</span>
+                    <h3 class="font-logo font-bold text-slate-900 text-sm mt-1">Troféu "Melhor da Partida"</h3>
+                    <p class="text-xs text-slate-500 mt-1">Acabamento com textura dourada.</p>
                 </div>
             </div>
 
@@ -231,20 +219,20 @@
             <div class="bg-white border border-slate-200 rounded-3xl p-6 sm:p-10 shadow-lg">
                 <div class="text-center mb-8">
                     <span class="text-brand-cyan text-xs font-bold uppercase tracking-wider">Faça sua Encomenda</span>
-                    <h2 class="text-2xl sm:text-3xl font-extrabold text-slate-900 mt-1">Solicitar Orçamento</h2>
-                    <p class="text-slate-500 text-sm mt-1">Preencha e receba o atendimento direto no WhatsApp.</p>
+                    <h2 class="font-logo text-2xl sm:text-3xl font-black text-slate-900 mt-1">Solicitar Orçamento</h2>
+                    <p class="text-slate-500 text-xs mt-1">Clique para enviar as especificações pelo WhatsApp.</p>
                 </div>
 
                 <form class="space-y-4" onsubmit="sendWhatsApp(event)">
                     <div>
-                        <label class="block text-xs font-semibold text-slate-700 mb-1">Seu Nome</label>
-                        <input type="text" id="clientName" required placeholder="Digite seu nome" class="w-full bg-slate-50 border border-slate-300 rounded-xl px-4 py-3 text-slate-800 placeholder-slate-400 focus:outline-none focus:border-brand-cyan">
+                        <label class="block text-xs font-bold uppercase text-slate-700 mb-1">Seu Nome</label>
+                        <input type="text" id="clientName" required placeholder="Digite seu nome" class="w-full bg-slate-50 border border-slate-300 rounded-xl px-4 py-3 text-sm text-slate-800 placeholder-slate-400 focus:outline-none focus:border-brand-cyan">
                     </div>
 
                     <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
                         <div>
-                            <label class="block text-xs font-semibold text-slate-700 mb-1">Categoria do Pedido</label>
-                            <select id="pieceType" class="w-full bg-slate-50 border border-slate-300 rounded-xl px-4 py-3 text-slate-800 focus:outline-none focus:border-brand-cyan">
+                            <label class="block text-xs font-bold uppercase text-slate-700 mb-1">Categoria do Pedido</label>
+                            <select id="pieceType" class="w-full bg-slate-50 border border-slate-300 rounded-xl px-4 py-3 text-sm text-slate-800 focus:outline-none focus:border-brand-cyan">
                                 <option value="Aniversário / Festa">Aniversário / Festa</option>
                                 <option value="Suporte / Utilidade">Suporte / Utilidades</option>
                                 <option value="Chaveiro / Brinde">Chaveiro / Brinde</option>
@@ -253,18 +241,18 @@
                             </select>
                         </div>
                         <div>
-                            <label class="block text-xs font-semibold text-slate-700 mb-1">Quantidade</label>
-                            <input type="number" id="quantity" min="1" value="1" class="w-full bg-slate-50 border border-slate-300 rounded-xl px-4 py-3 text-slate-800 focus:outline-none focus:border-brand-cyan">
+                            <label class="block text-xs font-bold uppercase text-slate-700 mb-1">Quantidade</label>
+                            <input type="number" id="quantity" min="1" value="1" class="w-full bg-slate-50 border border-slate-300 rounded-xl px-4 py-3 text-sm text-slate-800 focus:outline-none focus:border-brand-cyan">
                         </div>
                     </div>
 
                     <div>
-                        <label class="block text-xs font-semibold text-slate-700 mb-1">Detalhes do Pedido</label>
-                        <textarea id="description" rows="3" placeholder="Descreva as cores, tamanhos ou detalhes da peça..." class="w-full bg-slate-50 border border-slate-300 rounded-xl px-4 py-3 text-slate-800 placeholder-slate-400 focus:outline-none focus:border-brand-cyan"></textarea>
+                        <label class="block text-xs font-bold uppercase text-slate-700 mb-1">Detalhes da Encomenda</label>
+                        <textarea id="description" rows="3" placeholder="Descreva as cores, tamanhos ou detalhes..." class="w-full bg-slate-50 border border-slate-300 rounded-xl px-4 py-3 text-sm text-slate-800 placeholder-slate-400 focus:outline-none focus:border-brand-cyan"></textarea>
                     </div>
 
-                    <button type="submit" class="w-full bg-emerald-600 hover:bg-emerald-700 text-white font-bold py-4 rounded-xl shadow-md transition-all flex items-center justify-center gap-3">
-                        <i class="fa-brands fa-whatsapp text-xl"></i>
+                    <button type="submit" class="w-full bg-emerald-600 hover:bg-emerald-700 text-white font-bold text-xs uppercase tracking-wider py-4 rounded-xl shadow-md transition-all flex items-center justify-center gap-3">
+                        <i class="fa-brands fa-whatsapp text-lg"></i>
                         <span>Enviar Pedido pelo WhatsApp</span>
                     </button>
                 </form>
@@ -272,17 +260,25 @@
         </div>
     </section>
 
-    <!-- Rodapé Limpo (Estilo Cartão) -->
+    <!-- Rodapé -->
     <footer class="bg-white border-t border-slate-200 py-12 px-4">
         <div class="max-w-7xl mx-auto flex flex-col md:flex-row items-center justify-between gap-8 text-center md:text-left">
             <div>
-                <h3 class="text-2xl font-black text-slate-900">ALT<span class="text-slate-900">LINE</span> 3D</h3>
-                <p class="text-xs font-semibold text-slate-500 mt-1 uppercase">— CONECTAMOS IDEIAS, ELEVAMOS SOLUÇÕES. —</p>
+                <div class="flex items-baseline justify-center md:justify-start">
+                    <span class="font-logo font-black text-2xl tracking-[0.2em] text-slate-900">ALT</span>
+                    <span class="font-logo font-black text-2xl tracking-[0.2em] text-slate-900">LIN</span>
+                    <span class="font-logo font-black text-2xl tracking-[0.2em] text-slate-900">E</span>
+                    <div class="ml-1.5 flex flex-col gap-[3px] self-center">
+                        <span class="w-3.5 h-[3px] bg-brand-cyan rounded-full"></span>
+                        <span class="w-3.5 h-[3px] bg-brand-yellow rounded-full"></span>
+                        <span class="w-3.5 h-[3px] bg-brand-orange rounded-full"></span>
+                    </div>
+                </div>
+                <p class="text-xs font-semibold tracking-[0.2em] text-slate-500 mt-1 uppercase">— CONECTAMOS IDEIAS, ELEVAMOS SOLUÇÕES. —</p>
                 <p class="text-slate-500 text-xs mt-2">Soluções e Impressões • Personalização para Aniversários, Festas e Eventos • Projetos Personalizados</p>
             </div>
 
-            <!-- Contatos do Cartão -->
-            <div class="flex flex-col sm:flex-row items-center gap-6 text-sm text-slate-700 font-medium">
+            <div class="flex flex-col sm:flex-row items-center gap-6 text-xs font-bold tracking-wide uppercase text-slate-700">
                 <a href="https://wa.me/553299941276" target="_blank" class="flex items-center gap-2 hover:text-emerald-600">
                     <i class="fa-brands fa-whatsapp text-emerald-600 text-lg"></i>
                     <span>(32) 9994-1276</span>
@@ -297,7 +293,7 @@
                 </a>
             </div>
         </div>
-        <div class="text-center text-xs text-slate-400 mt-8 pt-6 border-t border-slate-100">
+        <div class="text-center text-[11px] text-slate-400 mt-8 pt-6 border-t border-slate-100">
             &copy; 2026 ALTLINE 3D. Todos os direitos reservados.
         </div>
     </footer>
